@@ -1,6 +1,6 @@
 {
   "name": "@xtremestuff/dsh-plugin-resolve",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "DSH bundle that bridges DaVinci Resolve into DSH: registers Resolve 21.1+ native ResolveMCP (stdio) or the davinci-resolve-mcp community server with DSH's mcp-client bridge, exposing Resolve's tools as first-class agent tools.",
   "type": "module",
   "main": "lib/index.js",
