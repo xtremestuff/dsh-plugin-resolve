@@ -1,0 +1,22 @@
+# dsh-plugin-resolve bundle patch.
+#
+# Mounts the Resolve bridge plugin. It registers DaVinci Resolve's MCP server
+# with DSH's MCP server manager (`ctx.mcpManager`) for this bundle's lifetime,
+# so Resolve's tools appear to DSH agents as `mcp__resolve__*`.
+#
+# Backend selection (config `mode`):
+#   auto      (default) native ResolveMCP when present, else the community server
+#   native            DaVinci Resolve Studio 21.1+ bundled `ResolveMCP` (stdio)
+#   community         `davinci-resolve-mcp` npm bootstrapper (stdio, 37 compound /
+#                     390 granular tools, Resolve 18.5+, free edition via bridge)
+#
+# Zero-config by default. Override any field by editing this row, e.g.:
+#
+#   config:
+#     mode: community
+#     serverName: resolve
+#     communityArgs: ['-y', 'davinci-resolve-mcp']
+
+- insert:
+    - id: resolve-mcp
+      name: dsh-plugin-resolve

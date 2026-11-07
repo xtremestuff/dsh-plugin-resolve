@@ -1,0 +1,54 @@
+{
+  "name": "@xtremestuff/dsh-plugin-resolve",
+  "version": "0.1.2",
+  "description": "DSH bundle that bridges DaVinci Resolve into DSH: registers Resolve 21.1+ native ResolveMCP (stdio) or the davinci-resolve-mcp community server with DSH's mcp-client bridge, exposing Resolve's tools as first-class agent tools.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "bundle",
+    "plugin",
+    "davinci-resolve",
+    "mcp",
+    "video-editing",
+    "post-production"
+  ],
+  "license": "MIT",
+  "author": "xtremestuff",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xtremestuff/dsh-plugin-resolve.git"
+  },
+  "homepage": "https://github.com/xtremestuff/dsh-plugin-resolve#readme",
+  "bugs": {
+    "url": "https://github.com/xtremestuff/dsh-plugin-resolve/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.2.0-rc.2"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "^4.1.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
